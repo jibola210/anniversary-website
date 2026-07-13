@@ -44,4 +44,12 @@ window.addEventListener("load", () => {
 
     setInterval(updateCounter,1000);
 
-});
+});function openLetter(){
+
+    document.getElementById("hiddenLetter").style.display="block";
+
+    document.getElementById("hiddenLetter").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}

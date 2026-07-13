@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Anniversary ❤️</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<script>
+function openHeart() {
+    document.querySelector(".loader").classList.add("hide");
+
+    setTimeout(() => {
+        document.getElementById("letter").scrollIntoView({
+            behavior: "smooth"
+        });
+    }, 800);
+}
+</script>
+<body>
+
+    <!-- ================= LOADER ================= -->
+
+    <div class="loader">
+
+        <div class="loader-content">
+
+            <div class="heart">❤️</div>
+
+            <h1>JIBOLA</h1>
+
+            <span>❤️</span>
+
+            <h1>PRAISE</h1>
+
+            <p>Celebrating One Beautiful Year Together</p>
+<button class="start-btn" onclick="openHeart()">
+    Open My Heart →
+        </div>
+
+    </div>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content fade-up"></div>
+
+            <h2>Happy 1st Anniversary, Praise ❤️</h2>
+
+            <h1>365 Beautiful Days Together</h1>
+
+            <p>
+                One year ago, I never imagined that one person could bring
+                so much joy, peace, and meaning into my life.
+                <br><br>
+                Thank you for every smile, every lesson, and every beautiful memory.
+                <br><br>
+                Happy First Anniversary, my love.
+            </p>
+
+        </div>
+
+   <!-- ================= LOVE LETTER ================= -->
+
+<section id="letter" class="letter">
+
+    <div class="letter-container">
+
+        <h2>Open My Heart ❤️</h2>
+
+        <p>
+            Dear Praise,
+        </p>
+
+        <p>
+            One year ago, I couldn't have imagined where this journey would take us.
+            Looking back today, I'm grateful for every conversation, every laugh,
+            every challenge we overcame, and every moment we've shared.
+        </p>
+
+        <p>
+            This is only the beginning of what I hope will be many more beautiful
+            chapters together.
+        </p>
+
+        <p>
+            Happy First Anniversary.
+        </p>
+
+        <p class="signature">
+            With love,<br>
+            JIBOLA ❤️
+        </p>
+
+    </div>
+
+ </section>
+<!-- ================= COUNTER ================= -->
+
+<section class="counter">
+
+    <h2>Together Since ❤️</h2>
+
+    <p class="date">
+        August 11, 2025
+    </p>
+
+    <div class="counter-grid">
+
+        <div class="box">
+            <h1 id="days">0</h1>
+            <span>Days</span>
+        </div>
+
+        <div class="box">
+            <h1 id="hours">0</h1>
+            <span>Hours</span>
+        </div>
+
+        <div class="box">
+            <h1 id="minutes">0</h1>
+            <span>Minutes</span>
+        </div>
+
+        <div class="box">
+            <h1 id="seconds">0</h1>
+            <span>Seconds</span>
+        </div>
+
+    </div>
+
+</section>
+    </div>
+
+</section>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

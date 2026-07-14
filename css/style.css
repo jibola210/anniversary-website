@@ -1,7 +1,12 @@
-/* =========================================
-   PROJECT AURORA - PART 1
-   RESET + BODY + LOADER + HERO
-========================================= */
+/* ==========================================
+   GOOGLE FONTS
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
 
 *{
     margin:0;
@@ -14,397 +19,521 @@ html{
 }
 
 body{
+
     font-family:'Poppins',sans-serif;
-    background:#090909;
+    background:#080808;
     color:#ffffff;
     overflow-x:hidden;
-    line-height:1.7;
 }
 
-/* ===== Sections ===== */
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#D4AF37;
+    border-radius:20px;
+}
+
+/* ==========================================
+   SECTION
+========================================== */
 
 section{
-    width:100%;
-    min-height:100vh;
-    padding:80px 24px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    padding:100px 25px;
 }
 
-/* ===== Loader ===== */
+/* ==========================================
+   LOADER
+========================================== */
 
 .loader{
+
     position:fixed;
     inset:0;
-    background:#090909;
+
+    background:#050505;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    flex-direction:column;
+
     z-index:9999;
+
+    transition:1s;
+}
+
+.loader-content{
+
+    text-align:center;
+}
+
+.heart{
+
+    font-size:5rem;
+
+    animation:pulse 1.5s infinite;
 }
 
 .loader h1{
-    color:#D4AF37;
-    font-size:2rem;
-    margin-bottom:15px;
+
     font-family:'Playfair Display',serif;
+
+    margin:10px 0;
+
+    color:#D4AF37;
+
+    letter-spacing:3px;
 }
 
 .loader p{
-    color:#cccccc;
-    font-size:1rem;
+
+    color:#ddd;
+
+    margin-top:20px;
 }
 
-/* ===== Hero ===== */
+/* ==========================================
+   HERO
+========================================== */
 
 .hero{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
     text-align:center;
-    background:#090909;
+
+    background:
+    radial-gradient(circle at top,#3d2f00 0%,#080808 60%);
 }
 
 .hero-content{
+
     width:100%;
-    max-width:650px;
-    margin:auto;
+    max-width:800px;
 }
 
 .hero h2{
+
     color:#D4AF37;
+
     font-size:1.3rem;
-    margin-bottom:15px;
-    font-family:'Playfair Display',serif;
+
+    margin-bottom:20px;
+
+    letter-spacing:2px;
 }
 
 .hero h1{
-    font-size:3.3rem;
-    line-height:1.15;
-    margin-bottom:25px;
+
+    font-size:4rem;
+
     font-family:'Playfair Display',serif;
+
+    margin-bottom:35px;
+
+    line-height:1.2;
 }
 
 .hero p{
-    max-width:560px;
-    margin:0 auto 40px;
+
+    max-width:650px;
+
+    margin:auto;
+
     color:#d7d7d7;
-    font-size:1.08rem;
+
+    line-height:2;
+
+    font-size:1.05rem;
 }
 
-/* ===== Button ===== */
+/* ==========================================
+   BUTTON
+========================================== */
 
 .start-btn{
-    background:#D4AF37;
-    color:#090909;
+
+    margin-top:45px;
+
+    padding:18px 45px;
+
     border:none;
-    padding:16px 40px;
-    border-radius:999px;
-    cursor:pointer;
-    font-size:1rem;
+
+    border-radius:50px;
+
+    background:#D4AF37;
+
+    color:#111;
+
     font-weight:600;
-    transition:.3s ease;
+
+    cursor:pointer;
+
+    transition:.35s;
 }
 
 .start-btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 30px rgba(212,175,55,.35);
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 35px rgba(212,175,55,.35);
 }
 
-/* ===== Mobile ===== */
-
-@media (max-width:768px){
-
-    section{
-        padding:70px 20px;
-    }
-
-    .hero h1{
-        font-size:2.4rem;
-    }
-
-    .hero p{
-        font-size:1rem;
-    }
-
-    .start-btn{
-        width:100%;
-        max-width:280px;
-    }
-
-}/* =========================================
-   PROJECT AURORA - PART 2
-   LETTER + COUNTER
-========================================= */
-
-/* ===== Letter ===== */
+/* ==========================================
+   LETTER
+========================================== */
 
 .letter{
-    background:#111111;
+
+    background:#111;
 }
 
 .letter-container{
-    width:100%;
-    max-width:700px;
+
+    max-width:750px;
+
     margin:auto;
+
+    background:#181818;
+
+    padding:60px;
+
+    border-radius:30px;
+
+    border:1px solid rgba(212,175,55,.2);
 }
 
 .letter h2{
+
     text-align:center;
+
     color:#D4AF37;
-    font-size:2.2rem;
+
     margin-bottom:40px;
+
     font-family:'Playfair Display',serif;
 }
 
 .letter p{
-    font-size:1.1rem;
-    color:#EAEAEA;
+
+    color:#e7e7e7;
+
     line-height:2;
+
     margin-bottom:22px;
 }
 
 .signature{
+
     margin-top:40px;
+
     color:#D4AF37;
-    font-weight:600;
+
+    font-size:1.1rem;
 }
 
-/* ===== Counter ===== */
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}/* ==========================================
+   COUNTER
+========================================== */
 
 .counter{
-    background:#090909;
+
+    background:#0d0d0d;
+}
+
+.counter-container{
+
+    max-width:1100px;
+
+    margin:auto;
+
     text-align:center;
 }
 
 .counter h2{
+
+    font-size:2.6rem;
+
     color:#D4AF37;
-    font-size:2.4rem;
+
     margin-bottom:15px;
+
     font-family:'Playfair Display',serif;
 }
 
 .date{
-    color:#bfbfbf;
-    margin-bottom:50px;
-    font-size:1rem;
-}
 
-/* ===== Grid ===== */
+    color:#bdbdbd;
+
+    margin-bottom:50px;
+
+    font-size:1.1rem;
+}
 
 .counter-grid{
-    width:100%;
-    max-width:520px;
-    margin:auto;
 
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:22px;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:25px;
 }
 
-/* ===== Cards ===== */
-
 .box{
-    background:#181818;
-    border-radius:22px;
-    padding:35px 20px;
 
-    border:1px solid rgba(212,175,55,.18);
+    background:#171717;
 
-    transition:.3s;
+    padding:40px 20px;
+
+    border-radius:25px;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    transition:.35s;
 }
 
 .box:hover{
-    transform:translateY(-6px);
+
+    transform:translateY(-10px);
+
     border-color:#D4AF37;
+
+    box-shadow:0 20px 40px rgba(212,175,55,.15);
 }
 
 .box h1{
-    font-size:2.8rem;
+
     color:#D4AF37;
+
+    font-size:3rem;
+
     margin-bottom:10px;
-    font-family:'Playfair Display',serif;
 }
 
 .box span{
-    color:#dddddd;
+
+    color:#ddd;
+
+    letter-spacing:1px;
 }
 
-/* ===== Mobile ===== */
-
-@media(max-width:768px){
-
-    .letter h2{
-        font-size:1.8rem;
-    }
-
-    .letter p{
-        font-size:1rem;
-        line-height:1.9;
-    }
-
-    .counter h2{
-        font-size:2rem;
-    }
-
-    .counter-grid{
-        gap:18px;
-    }
-
-    .box{
-        padding:28px 15px;
-    }
-
-    .box h1{
-        font-size:2.2rem;
-    }
-
-/* ================= TIMELINE ================= */
+/* ==========================================
+   TIMELINE
+========================================== */
 
 .timeline{
-    background:#0b0b0b;
-    padding:100px 25px;
+
+    background:#080808;
 }
 
 .timeline-container{
-    max-width:700px;
+
+    max-width:800px;
+
     margin:auto;
 }
 
 .timeline h2{
+
     text-align:center;
+
     color:#D4AF37;
-    font-size:2.5rem;
-    font-family:'Playfair Display',serif;
+
     margin-bottom:60px;
+
+    font-size:2.5rem;
+
+    font-family:'Playfair Display',serif;
 }
 
 .timeline-item{
-    position:relative;
-    background:#171717;
-    border:1px solid rgba(212,175,55,.2);
-    border-radius:20px;
+
+    background:#151515;
+
+    border-radius:22px;
+
     padding:30px;
-    margin-bottom:35px;
-    transition:.3s;
+
+    margin-bottom:30px;
+
+    border-left:5px solid #D4AF37;
+
+    transition:.35s;
 }
 
 .timeline-item:hover{
-    transform:translateY(-6px);
-    border-color:#D4AF37;
+
+    transform:translateX(8px);
+
+    background:#1b1b1b;
 }
 
-.timeline-item::before{
-    content:"";
-    position:absolute;
-    left:25px;
-    top:35px;
-    width:14px;
-    height:14px;
-    border-radius:50%;
-    background:#D4AF37;
-}
+.timeline-item h3{
 
-.content{
-    padding-left:35px;
-}
-
-.content h3{
     color:#D4AF37;
-    margin-bottom:12px;
-    font-size:1.3rem;
+
+    margin-bottom:15px;
 }
 
-.content p{
-    color:#e5e5e5;
-    line-height:1.9;
+.timeline-item p{
+
+    color:#d8d8d8;
+
+    line-height:1.8;
 }
 
-@media(max-width:768px){
-
-.timeline{
-    padding:80px 20px;
-}
-
-.timeline h2{
-    font-size:2rem;
-}
-
-.timeline-item{
-    padding:25px;
-}
-
-.content h3{
-    font-size:1.15rem;
-}
-
-}
-}/* ================= REASONS ================= */
+/* ==========================================
+   20 REASONS
+========================================== */
 
 .reasons{
-    background:#090909;
+
+    background:#101010;
 }
 
 .reasons-container{
-    max-width:1000px;
+
+    max-width:1200px;
+
     margin:auto;
 }
 
 .reasons h2{
+
     text-align:center;
+
     color:#D4AF37;
+
     margin-bottom:60px;
+
+    font-size:2.5rem;
+
     font-family:'Playfair Display',serif;
 }
 
 .reasons-grid{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
     gap:25px;
 }
 
 .reason-card{
+
     background:#181818;
-    padding:30px;
-    border-radius:20px;
-    border:1px solid rgba(212,175,55,.2);
-    transition:.3s;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    border:1px solid rgba(212,175,55,.15);
+
+    transition:.35s;
 }
 
 .reason-card:hover{
+
     transform:translateY(-8px);
+
     border-color:#D4AF37;
+
+    box-shadow:0 20px 35px rgba(212,175,55,.15);
 }
 
 .reason-card h3{
-    color:#D4AF37;
-    font-size:2rem;
-    margin-bottom:15px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:#D4AF37;
+
+    color:#111;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+    font-size:1.3rem;
 }
 
 .reason-card p{
-    color:#dddddd;
+
+    color:#ddd;
+
     line-height:1.8;
-}/* ================= PROMISE ================= */
+}/* ==========================================
+   PROMISE
+========================================== */
 
 .promise{
-    background:#111;
-    text-align:center;
+    background:#0b0b0b;
 }
 
 .promise-container{
-    max-width:700px;
+    max-width:800px;
     margin:auto;
+    text-align:center;
+    background:#181818;
+    padding:60px 40px;
+    border-radius:30px;
+    border:1px solid rgba(212,175,55,.2);
 }
 
 .promise h2{
-    color:#D4AF37;
     font-family:'Playfair Display',serif;
-    font-size:2.3rem;
-    margin-bottom:40px;
+    color:#D4AF37;
+    font-size:2.5rem;
+    margin-bottom:30px;
 }
 
 .promise p{
-    color:#e5e5e5;
+    color:#ddd;
     line-height:2;
     margin-bottom:25px;
     font-size:1.05rem;
@@ -412,57 +541,179 @@ section{
 
 .promise h3{
     color:#D4AF37;
-    margin-top:50px;
-    font-weight:500;
+    margin-top:30px;
 }
 
 .promise h1{
-    margin-top:15px;
     font-family:'Playfair Display',serif;
-    font-size:2.5rem;
-}/* ================= FINAL LETTER ================= */
+    color:#fff;
+    margin-top:10px;
+}
+
+/* ==========================================
+   FINAL LETTER
+========================================== */
 
 .final-letter{
-    background:#090909;
+    background:#080808;
+    padding:100px 20px;
     text-align:center;
 }
 
 .envelope{
-    width:300px;
+    max-width:420px;
     margin:auto;
-    background:#D4AF37;
-    padding:60px 20px;
-    border-radius:20px;
+    background:#181818;
+    border-radius:25px;
+    padding:45px;
     cursor:pointer;
     transition:.4s;
+    border:1px solid rgba(212,175,55,.2);
 }
 
 .envelope:hover{
-    transform:scale(1.05);
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 20px 40px rgba(212,175,55,.2);
+}
+
+.letter-paper h2{
+    color:#D4AF37;
+    margin-bottom:20px;
+    font-family:'Playfair Display',serif;
+}
+
+.letter-paper p{
+    color:#ddd;
 }
 
 .hidden-letter{
     display:none;
     background:#111;
-    padding:100px 25px;
 }
 
 .hidden-container{
-    max-width:700px;
+    max-width:850px;
     margin:auto;
+    background:#181818;
+    padding:60px;
+    border-radius:30px;
+    border:1px solid rgba(212,175,55,.2);
 }
 
 .hidden-container h2{
+    text-align:center;
     color:#D4AF37;
     margin-bottom:35px;
     font-family:'Playfair Display',serif;
 }
 
 .hidden-container p{
+    color:#e5e5e5;
     line-height:2;
-    margin-bottom:25px;
+    margin-bottom:20px;
+}
+
+.hidden-container h3{
+    color:#D4AF37;
+    margin-top:30px;
 }
 
 .hidden-container h1{
-    margin-top:20px;
+    color:#fff;
+    font-family:'Playfair Display',serif;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+section{
+    padding:70px 20px;
+}
+
+.hero h1{
+    font-size:2.4rem;
+}
+
+.hero h2{
+    font-size:1.1rem;
+}
+
+.hero p{
+    font-size:1rem;
+    line-height:1.9;
+}
+
+.start-btn{
+    width:100%;
+    padding:16px;
+    font-size:1rem;
+}
+
+.letter-container,
+.promise-container,
+.hidden-container,
+.envelope{
+    padding:30px 22px;
+}
+
+.counter h2,
+.timeline h2,
+.reasons h2,
+.promise h2{
+    font-size:2rem;
+}
+
+.counter-grid{
+    grid-template-columns:1fr 1fr;
+}
+
+.reasons-grid{
+    grid-template-columns:1fr;
+}
+
+.box h1{
+    font-size:2.3rem;
+}
+
+.timeline-item{
+    padding:22px;
+}
+
+.reason-card{
+    padding:28px;
+}
+
+}
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media (max-width:480px){
+
+.counter-grid{
+    grid-template-columns:1fr;
+}
+
+.hero h1{
+    font-size:2rem;
+}
+
+.hero p{
+    font-size:.95rem;
+}
+
+.reason-card{
+    padding:24px;
+}
+
+.letter-container,
+.promise-container,
+.hidden-container{
+    padding:25px 18px;
+}
+
 }

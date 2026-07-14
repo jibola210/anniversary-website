@@ -1,55 +1,67 @@
-window.addEventListener("load", () => {
+// ==============================
+// LOADER
+// ==============================
 
-    // Hide loader after 3 seconds
+window.addEventListener("load", () => {
     const loader = document.querySelector(".loader");
 
     setTimeout(() => {
-        loader.style.display = "none";
-    }, 3000);
+        loader.style.opacity = "0";
+        loader.style.visibility = "hidden";
+    }, 2500);
+});
 
-    // Anniversary Counter
-    const startDate = new Date("August 11, 2025 00:00:00");
+// ==============================
+// LIVE ANNIVERSARY COUNTER
+// ==============================
 
-    function updateCounter(){
+const startDate = new Date("August 11, 2025 00:00:00").getTime();
 
-        const now = new Date();
+function updateCounter() {
 
-        const difference = now - startDate;
+    const now = new Date().getTime();
 
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const distance = now - startDate;
 
-        const hours = Math.floor(
-            (difference % (1000 * 60 * 60 * 24))
-            / (1000 * 60 * 60)
-        );
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-        const minutes = Math.floor(
-            (difference % (1000 * 60 * 60))
-            / (1000 * 60)
-        );
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
-        const seconds = Math.floor(
-            (difference % (1000 * 60))
-            / 1000
-        );
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-        document.getElementById("days").textContent = days;
-        document.getElementById("hours").textContent = hours;
-        document.getElementById("minutes").textContent = minutes;
-        document.getElementById("seconds").textContent = seconds;
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+
+}
+
+updateCounter();
+
+setInterval(updateCounter, 1000);
+
+// ==============================
+// OPEN FINAL LETTER
+// ==============================
+
+function openLetter() {
+
+    const letter = document.getElementById("hiddenLetter");
+
+    if (letter.style.display === "block") {
+
+        letter.style.display = "none";
+
+    } else {
+
+        letter.style.display = "block";
+
+        letter.scrollIntoView({
+            behavior: "smooth"
+        });
 
     }
-
-    updateCounter();
-
-    setInterval(updateCounter,1000);
-
-});function openLetter(){
-
-    document.getElementById("hiddenLetter").style.display="block";
-
-    document.getElementById("hiddenLetter").scrollIntoView({
-        behavior:"smooth"
-    });
 
 }
